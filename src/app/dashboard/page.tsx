@@ -24,7 +24,9 @@ const Dashboard = () => {
     fetchData();
   }, []);
 
-  console.log(data);
+  if (data == null) {
+    alert(error);
+  }
 
   return (
     // dashboard page
