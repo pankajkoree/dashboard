@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import rightContent from "../../../public/rightContent.png";
 import Image from "next/image";
 import teslaIcon from "../../../public/tesla-icon.png";
 
