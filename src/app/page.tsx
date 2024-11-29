@@ -11,7 +11,9 @@ export default function Home() {
   };
   return (
     <div>
-      <button onClick={gotToDashboard}>Dashboard</button>
+     <div className="relative flex justify-center xl:mt-[400px]">
+     <button onClick={gotToDashboard} className="relative flex border p-4 xl:text-2xl hover:bg-green-600 rounded-lg">Dashboard</button>
+     </div>
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
