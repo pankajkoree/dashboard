@@ -11,7 +11,10 @@ import reports from "../../../public/reports.png";
 import people from "../../../public/people.png";
 import user from "../../../public/user.png";
 import download from "../../../public/Download.png";
+import drop_down from "../../../public/drop_down.png";
+import drop_down_up from "../../../public/drop_down_up.png";
 import toast from "react-hot-toast";
+import BarGraph from "../../../public/components/chart";
 
 interface Data {
   api_secret: string;
@@ -21,6 +24,9 @@ const Dashboard = () => {
   const [data, setData] = useState<Data | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [activeView, setActiveView] = useState<string>("Reports");
+  const [isOpenTime, setIsOpenTime] = useState<boolean>(false);
+  const [isOpenPeople, setIsOpenPeople] = useState<boolean>(false);
+  const [isOpenTopic, setIsOpenTopic] = useState<boolean>(false);
 
   // fetching the data using axios
   useEffect(() => {
@@ -67,6 +73,18 @@ const Dashboard = () => {
     }
   };
 
+  const changeDropDownTimeFrame = (): void => {
+    setIsOpenTime((prevState) => !prevState);
+  };
+
+  const changeDropDownPeople = (): void => {
+    setIsOpenPeople((prevState) => !prevState);
+  };
+
+  const changeDropDownTopic = (): void => {
+    setIsOpenTopic((prevState) => !prevState);
+  };
+
   const renderContent = () => {
     switch (activeView) {
       case "Reports":
@@ -76,7 +94,7 @@ const Dashboard = () => {
             <div className="relative flex w-full justify-between items-center">
               {/* Reports section */}
               <div className="relative flex xl:w-[150px]">
-                <p>Reports</p>
+                <p className="font-bold xl:text-2xl">Reports</p>
               </div>
 
               {/* Download section */}
@@ -85,11 +103,86 @@ const Dashboard = () => {
                 onClick={clickDownload}
               >
                 <Image src={download} alt="download" className="mr-2" />
-                <p>Download</p>
+                <p className="font-bold">Download</p>
               </div>
             </div>
-
             {/* end div to determine section */}
+
+            {/* horizontal bar */}
+            <div className="relative flex h-[1px] bg-gray-400 xl:top-8"></div>
+            {/* end horizontal bar */}
+
+            {/* horizontal bar */}
+            <div className="relative grid grid-cols-3 gap-6 xl:top-12">
+              {/* time frame */}
+              <div
+                className="relative flex justify-between items-center w-full border bg-slate-50 p-2 rounded-2xl"
+                onClick={changeDropDownTimeFrame}
+              >
+                <div>
+                  <p>
+                    Timeframe: <span className="font-semibold">All-time</span>
+                  </p>
+                </div>
+                <div className="relative flex justify-end items-center">
+                  <Image
+                    src={isOpenTime ? drop_down_up : drop_down}
+                    alt="drop down"
+                  />
+                </div>
+              </div>
+              {/* end time frame */}
+
+              {/* people */}
+              <div
+                className="relative flex justify-between items-center w-full border bg-slate-50 p-2 rounded-2xl"
+                onClick={changeDropDownPeople}
+              >
+                <div>
+                  <p>
+                    People: <span className="font-semibold">All</span>
+                  </p>
+                </div>
+                <div className="relative flex justify-end items-center">
+                  <Image
+                    src={isOpenPeople ? drop_down_up : drop_down}
+                    alt="drop down"
+                  />
+                </div>
+              </div>
+              {/* end people */}
+
+              {/* topic */}
+              <div
+                className="relative flex justify-between items-center w-full border bg-slate-50 p-2 rounded-2xl"
+                onClick={changeDropDownTopic}
+              >
+                <div>
+                  <p>
+                    Topic: <span className="font-semibold">All</span>
+                  </p>
+                </div>
+                <div className="relative flex justify-end">
+                  <Image
+                    src={isOpenTopic ? drop_down_up : drop_down}
+                    alt="drop down"
+                  />
+                </div>
+              </div>
+              {/* end topic */}
+            </div>
+            {/* end horizontal bar */}
+
+            {/* activity */}
+            <div className="relative grid grid-cols-2 xl:top-20">
+              <div className="relative bg-red-300">
+                <p>activity</p>
+              </div>
+              <div>
+                <BarGraph />
+              </div>
+            </div>
+            {/* end activity */}
           </div>
         );
       case "Library":
@@ -107,9 +200,9 @@ const Dashboard = () => {
 
   return (
     // dashboard page
-    <div className="relative flex text-gray-600 bg-gray-100">
+    <div className="relative flex text-gray-600 bg-gray-200">
       {/* side bar */}
-      <div className="relative flex flex-col bg-white rounded-r-3xl xl:w-[250px] xl:min-h-screen">
+      <div className="relative flex flex-col bg-slate-50 rounded-r-3xl xl:w-[250px] xl:min-h-screen">
         {/* logo div */}
         <div className="relative flex xl:top-[43px] xl:left-[38px]">
           <Image
