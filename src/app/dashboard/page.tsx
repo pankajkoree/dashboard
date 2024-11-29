@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import teslaIcon from "../../../public/tesla-icon.png";
-import toast from "react-hot-toast";
 import getStarted from "../../../public/getStarted.png";
 import library from "../../../public/library.png";
 import settings from "../../../public/settings.png";
@@ -12,14 +11,16 @@ import reports from "../../../public/reports.png";
 import people from "../../../public/people.png";
 import user from "../../../public/user.png";
 import download from "../../../public/Download.png";
+import toast from "react-hot-toast";
 
-
+interface Data {
+  api_secret: string;
+}
 
 const Dashboard = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [activeView, setActiveView] = useState<string>("Reports");
-  console.log(data)
 
   // fetching the data using axios
   useEffect(() => {
@@ -42,34 +43,29 @@ const Dashboard = () => {
 
   const clickDownload = async () => {
     if (data && data.api_secret) {
+      console.log(data.api_secret);
       try {
         const apiSecret = data.api_secret;
-  
+
         // Send the api_secret to the newly created proxy API
-        const response = await axios.post('/api/proxy/imgDownload', {
-          api: apiSecret
+        const response = await axios.post("/api/proxy/imgDownload", {
+          api: apiSecret,
         });
-  
 
         const base64Image = response.data;
-  
-        const link = document.createElement('a');
+
+        // Trigger the download of the Base64 image
+        const link = document.createElement("a");
         link.href = `data:image/png;base64,${base64Image}`;
-        link.download = 'downloaded_image.png';
+        link.download = "downloaded_image.png";
         link.click();
       } catch (error) {
-        console.error('Error processing the request or downloading image:', error);
-        alert('An error occurred. Please try again.');
+        toast.error((error as any).message || "An unexpected error occurred.");
       }
     } else {
-      alert('API secret is missing or data is not available.');
+      alert("API secret is missing or data is not available.");
     }
   };
-  
-  
-  
-
-
 
   const renderContent = () => {
     switch (activeView) {
@@ -84,7 +80,10 @@ const Dashboard = () => {
               </div>
 
               {/* Download section */}
-              <div className="relative flex xl:w-[150px] justify-end items-center" onClick={clickDownload}>
+              <div
+                className="relative flex xl:w-[150px] justify-end items-center"
+                onClick={clickDownload}
+              >
                 <Image src={download} alt="download" className="mr-2" />
                 <p>Download</p>
               </div>
@@ -101,6 +100,10 @@ const Dashboard = () => {
         return <div className="p-4">Activities section.</div>;
     }
   };
+
+  if (error) {
+    toast.error((error as any).message || "An unexpected error occurred.");
+  }
 
   return (
     // dashboard page
