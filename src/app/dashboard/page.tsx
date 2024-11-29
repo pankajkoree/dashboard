@@ -7,26 +7,33 @@ import toast from "react-hot-toast";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<Error | null>(null);
 
   // fetching the data using axios
   useEffect(() => {
-    // Declare an async function inside useEffect
     const fetchData = async () => {
       try {
         // Fetch data from the public folder
         const response = await axios.get("/task-data.json");
         setData(response.data);
       } catch (error) {
-        setError(error);
+        if (error instanceof Error) {
+          setError(error);
+        } else {
+          setError(new Error("An unexpected error occurred"));
+        }
       }
     };
 
     fetchData();
   }, []);
 
-  if (data == null) {
-    toast.error(error)
+  if (error) {
+    return toast.error(error.message);
+  }
+
+  if (data) {
+    return toast.success(data);
   }
 
   return (
