@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -8,9 +8,12 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartData,
+  ChartOptions,
+  ChartJSOrUndefined,
 } from "chart.js";
 
-// Register ChartJS components
+// Register the necessary Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -20,40 +23,100 @@ ChartJS.register(
   Legend
 );
 
-const BarGraph: React.FC = () => {
-  // Chart Data
-  const data = {
-    labels: ["January", "February", "March", "April", "May", "June"],
+const GradientBarChart: React.FC = () => {
+  const chartRef = useRef<ChartJSOrUndefined<"bar", number[], string>>(null); // Correct type
+
+  const data: ChartData<"bar", number[], string> = {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
     datasets: [
       {
-        label: "Sales",
-        data: [65, 59, 80, 81, 56, 55], // Example data
-        backgroundColor: "rgba(75, 192, 192, 0.6)", // Bar color
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
+        label: "Activity",
+        data: [100, 150, 200, 250, 300, 150, 200, 350, 300, 400, 450, 500],
+        backgroundColor: (context: any) => {
+          const chart = context.chart;
+          const { ctx, chartArea } = chart;
+          if (!chartArea) return null;
+
+          const gradient = ctx.createLinearGradient(
+            0,
+            chartArea.bottom,
+            0,
+            chartArea.top
+          );
+          gradient.addColorStop(0, "rgba(33, 150, 243, 0.2)");
+          gradient.addColorStop(1, "rgba(33, 150, 243, 1)");
+          return gradient;
+        },
+        borderRadius: 8,
+        barPercentage: 0.6,
       },
     ],
   };
 
-  // Chart Options
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: "top" as const,
+        display: false,
       },
       title: {
         display: true,
-        text: "Monthly Sales Data",
+        text: "Activity",
+        align: "start",
+        font: {
+          size: 16,
+          weight: "bold",
+        },
+        padding: {
+          top: 10,
+          bottom: 10,
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          font: {
+            size: 12,
+          },
+        },
+      },
+      y: {
+        grid: {
+          borderColor: "rgba(200, 200, 200, 0.2)",
+        },
+        ticks: {
+          stepSize: 100,
+          font: {
+            size: 12,
+          },
+        },
       },
     },
   };
 
   return (
-    <div style={{ width: "80%", margin: "0 auto" }}>
-      <Bar data={data} options={options} />
+    <div style={{ width: "100%", height: "400px", margin: "0 auto" }}>
+      <Bar ref={chartRef} data={data} options={options} />
     </div>
   );
 };
 
-export default BarGraph;
+export default GradientBarChart;

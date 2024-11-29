@@ -14,7 +14,7 @@ import download from "../../../public/Download.png";
 import drop_down from "../../../public/drop_down.png";
 import drop_down_up from "../../../public/drop_down_up.png";
 import toast from "react-hot-toast";
-import BarGraph from "../../../public/components/chart";
+import GradientBarChart from "../../../public/components/chart";
 
 interface Data {
   api_secret: string;
@@ -179,7 +179,7 @@ const Dashboard = () => {
                 <p>activity</p>
               </div>
               <div className="bg-slate-50 rounded-2xl ">
-                <BarGraph />
+                <GradientBarChart />
               </div>
             </div>
             {/* end activity */}
