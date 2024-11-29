@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import teslaIcon from "../../../public/tesla-icon.png";
+import toast from "react-hot-toast";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
@@ -25,7 +26,7 @@ const Dashboard = () => {
   }, []);
 
   if (data == null) {
-    alert(error);
+    toast.error(error)
   }
 
   return (

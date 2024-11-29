@@ -1,8 +1,16 @@
+import { useRouter } from "next/navigation";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
+  const router = useRouter();
+
+  const gotToDashboard = () => {
+    router.push("/dashboard");
+  };
   return (
-    <h1>
-      main page
-    </h1>
+    <div>
+      <button onClick={gotToDashboard}>Dashboard</button>
+      <Toaster position="top-center" reverseOrder={false} />
+    </div>
   );
 }
