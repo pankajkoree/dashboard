@@ -11,11 +11,15 @@ import activities from "../../../public/activities.png";
 import reports from "../../../public/reports.png";
 import people from "../../../public/people.png";
 import user from "../../../public/user.png";
+import download from "../../../public/Download.png";
+
+
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState<Error | null>(null);
   const [activeView, setActiveView] = useState<string>("Reports");
+  console.log(data)
 
   // fetching the data using axios
   useEffect(() => {
@@ -36,10 +40,60 @@ const Dashboard = () => {
     fetchData();
   }, []);
 
+  const clickDownload = async () => {
+    if (data && data.api_secret) {
+      try {
+        const apiSecret = data.api_secret;
+  
+        // Send the api_secret to the newly created proxy API
+        const response = await axios.post('/api/proxy/imgDownload', {
+          api: apiSecret
+        });
+  
+        // Process the Base64 image data
+        const base64Image = response.data;
+  
+        // Trigger the download of the Base64 image
+        const link = document.createElement('a');
+        link.href = `data:image/png;base64,${base64Image}`;
+        link.download = 'downloaded_image.png';
+        link.click();
+      } catch (error) {
+        console.error('Error processing the request or downloading image:', error);
+        alert('An error occurred. Please try again.');
+      }
+    } else {
+      alert('API secret is missing or data is not available.');
+    }
+  };
+  
+  
+  
+
+
+
   const renderContent = () => {
     switch (activeView) {
       case "Reports":
-        return <div className="p-4">This is the Reports section.</div>;
+        return (
+          <div className="pt-4 pl-6 pr-6 w-full">
+            {/* div to determine section */}
+            <div className="relative flex w-full justify-between items-center">
+              {/* Reports section */}
+              <div className="relative flex xl:w-[150px]">
+                <p>Reports</p>
+              </div>
+
+              {/* Download section */}
+              <div className="relative flex xl:w-[150px] justify-end items-center" onClick={clickDownload}>
+                <Image src={download} alt="download" className="mr-2" />
+                <p>Download</p>
+              </div>
+            </div>
+
+            {/* end div to determine section */}
+          </div>
+        );
       case "Library":
         return <div className="p-4">Library section</div>;
       case "People":
@@ -53,7 +107,7 @@ const Dashboard = () => {
     // dashboard page
     <div className="relative flex text-gray-600 bg-gray-100">
       {/* side bar */}
-      <div className="relative flex flex-col bg-white rounded-r-xl xl:w-[230px] xl:min-h-screen">
+      <div className="relative flex flex-col bg-white rounded-r-3xl xl:w-[250px] xl:min-h-screen">
         {/* logo div */}
         <div className="relative flex xl:top-[43px] xl:left-[38px]">
           <Image
