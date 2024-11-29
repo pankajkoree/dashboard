@@ -116,7 +116,7 @@ const Dashboard = () => {
             <div className="relative grid grid-cols-3 gap-6 xl:top-12">
               {/* time frame */}
               <div
-                className="relative flex justify-between items-center w-full border bg-slate-50 p-2 rounded-2xl"
+                className="relative flex justify-between items-center w-full bg-slate-50 px-4 py-2 rounded-2xl"
                 onClick={changeDropDownTimeFrame}
               >
                 <div>
@@ -174,11 +174,11 @@ const Dashboard = () => {
             {/* end horizontal bar */}
 
             {/* activity */}
-            <div className="relative grid grid-cols-2 xl:top-20">
-              <div className="relative bg-red-300">
+            <div className="relative grid grid-cols-2 xl:top-20 gap-4">
+              <div className="relative bg-slate-50 rounded-2xl">
                 <p>activity</p>
               </div>
-              <div>
+              <div className="bg-slate-50 rounded-2xl ">
                 <BarGraph />
               </div>
             </div>
