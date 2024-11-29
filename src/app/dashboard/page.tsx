@@ -50,10 +50,9 @@ const Dashboard = () => {
           api: apiSecret
         });
   
-        // Process the Base64 image data
+
         const base64Image = response.data;
   
-        // Trigger the download of the Base64 image
         const link = document.createElement('a');
         link.href = `data:image/png;base64,${base64Image}`;
         link.download = 'downloaded_image.png';
