@@ -195,7 +195,7 @@ const Dashboard = () => {
                 <p>activity</p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
-                <p>GradientBarChart</p>
+                <p>place to show bar chart</p>
               </div>
             </div>
             {/* end activity */}
