@@ -117,11 +117,11 @@ const Dashboard = () => {
             {/* end div to determine section */}
 
             {/* horizontal bar */}
-            <div className="relative flex h-[1px] bg-gray-400 xl:top-8"></div>
+            <div className="relative flex h-[1px] bg-gray-400 xl:top-6"></div>
             {/* end horizontal bar */}
 
             {/* horizontal bar */}
-            <div className="relative grid grid-cols-3 gap-6 xl:top-12">
+            <div className="relative grid grid-cols-3 gap-6 xl:top-10">
               {/* time frame */}
               <div
                 className="relative flex justify-between items-center w-full bg-slate-50 px-4 py-2 rounded-2xl"
@@ -182,90 +182,112 @@ const Dashboard = () => {
             {/* end horizontal bar */}
 
             {/* activity */}
-            <div className="relative grid grid-cols-2 xl:top-20 gap-4">
-              <div className="relative bg-slate-50 rounded-2xl">
+            <div className="relative grid grid-cols-2 xl:top-14 gap-4">
+              <div className="relative bg-slate-50 rounded-2xl p-4">
                 <p>activity</p>
               </div>
-              <div className="bg-slate-50 rounded-2xl ">
+              <div className="bg-slate-50 rounded-2xl p-4">
                 <GradientBarChart />
               </div>
             </div>
             {/* end activity */}
 
             {/* topics */}
-            <div className="relative grid grid-cols-2 xl:top-20 gap-4">
+            <div className="relative grid grid-cols-2 xl:top-[72px] gap-4">
               {/* weakest */}
-              <div className="relative flex flex-col p-4">
+              <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
                 <div>Weakest Topics</div>
-
-                <div>
-                  <Image
-                    src={weak1}
-                    alt="Covid protocols"
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.weakest[0].name}</p>
-                  <p>{data?.topics.weakest[0].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={weak1}
+                      alt="Covid protocols"
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.weakest[0].name}</p>
+                    <p>{data?.topics.weakest[0].correct_percentage}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <Image
-                    src={weak2}
-                    alt={data?.topics.weakest[1].name}
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.weakest[1].name}</p>
-                  <p>{data?.topics.weakest[1].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={weak2}
+                      alt={data?.topics.weakest[1].name}
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.weakest[1].name}</p>
+                    <p>{data?.topics.weakest[1].correct_percentage}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <Image
-                    src={weak3}
-                    alt={data?.topics.weakest[2].name}
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.weakest[2].name}</p>
-                  <p>{data?.topics.weakest[2].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={weak3}
+                      alt={data?.topics.weakest[2].name}
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.weakest[2].name}</p>
+                    <p>{data?.topics.weakest[2].correct_percentage}</p>
+                  </div>
                 </div>
               </div>
               {/* strongest */}
-              <div className="relative flex flex-col p-4">
+              <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
                 <div>Strongest Topics</div>
-
-                <div>
-                  <Image
-                    src={strong1}
-                    alt={data?.topics.strongest[0].name}
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.strongest[0].name}</p>
-                  <p>{data?.topics.strongest[0].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={strong1}
+                      alt={data?.topics.strongest[0].name}
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.strongest[0].name}</p>
+                    <p>{data?.topics.strongest[0].correct_percentage}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <Image
-                    src={strong2}
-                    alt={data?.topics.strongest[1].name}
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.strongest[1].name}</p>
-                  <p>{data?.topics.strongest[1].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={strong2}
+                      alt={data?.topics.strongest[1].name}
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.strongest[1].name}</p>
+                    <p>{data?.topics.strongest[1].correct_percentage}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <Image
-                    src={strong3}
-                    alt={data?.topics.strongest[2].name}
-                    width="100"
-                    height="100"
-                  />
-                  <p>{data?.topics.strongest[2].name}</p>
-                  <p>{data?.topics.strongest[2].correct_percentage}</p>
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={strong3}
+                      alt={data?.topics.strongest[2].name}
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                  <div>
+                    <p>{data?.topics.strongest[2].name}</p>
+                    <p>{data?.topics.strongest[2].correct_percentage}</p>
+                  </div>
                 </div>
               </div>
             </div>
