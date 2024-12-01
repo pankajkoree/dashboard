@@ -15,6 +15,12 @@ import drop_down from "../../../public/drop_down.png";
 import drop_down_up from "../../../public/drop_down_up.png";
 import toast from "react-hot-toast";
 import GradientBarChart from "../../../public/components/chart";
+import weak1 from "../../../public/weak1.png";
+import weak2 from "../../../public/weak2.png";
+import weak3 from "../../../public/weak3.png";
+import strong1 from "../../../public/strong1.png";
+import strong2 from "../../../public/strong2.png";
+import strong3 from "../../../public/strong3.png";
 
 interface Data {
   api_secret: string;
@@ -84,6 +90,8 @@ const Dashboard = () => {
   const changeDropDownTopic = (): void => {
     setIsOpenTopic((prevState) => !prevState);
   };
+
+  console.log(data);
 
   const renderContent = () => {
     switch (activeView) {
@@ -183,6 +191,55 @@ const Dashboard = () => {
               </div>
             </div>
             {/* end activity */}
+
+            {/* topics */}
+            <div className="relative grid grid-cols-2 xl:top-20 gap-4">
+              {/* weakest */}
+              <div>
+                <div>Weakest Topics</div>
+
+                <div>
+                  <Image
+                    src={weak1}
+                    alt="Covid protocols"
+                    width="100"
+                    height="100"
+                  />
+                  <p>{data?.topics.weakest[0].name}</p>
+                  <p>{data?.topics.weakest[0].correct_percentage}</p>
+                </div>
+
+                <div>
+                  <Image
+                    src={weak2}
+                    alt={data?.topics.weakest[1].name}
+                    width="100"
+                    height="100"
+                  />
+                  <p>{data?.topics.weakest[1].name}</p>
+                  <p>{data?.topics.weakest[1].correct_percentage}</p>
+                </div>
+
+                <div>
+                  <Image
+                    src={weak3}
+                    alt={data?.topics.weakest[2].name}
+                    width="100"
+                    height="100"
+                  />
+                  <p>{data?.topics.weakest[2].name}</p>
+                  <p>{data?.topics.weakest[2].correct_percentage}</p>
+                </div>
+              </div>
+              {/* strongest */}
+              <div>
+                <div>Strongest Topics</div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            {/* end topics */}
           </div>
         );
       case "Library":

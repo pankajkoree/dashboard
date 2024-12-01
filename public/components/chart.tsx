@@ -113,7 +113,7 @@ const GradientBarChart: React.FC = () => {
   };
 
   return (
-    <div style={{ width: "100%", height: "400px", margin: "0 auto" }}>
+    <div style={{ width: "100%", height: "200px", margin: "0 auto" }}>
       <Bar ref={chartRef} data={data} options={options} />
     </div>
   );
