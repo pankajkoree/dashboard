@@ -14,7 +14,6 @@ import download from "../../../public/Download.png";
 import drop_down from "../../../public/drop_down.png";
 import drop_down_up from "../../../public/drop_down_up.png";
 import toast from "react-hot-toast";
-import GradientBarChart from "../../../public/components/chart";
 import weak1 from "../../../public/weak1.png";
 import weak2 from "../../../public/weak2.png";
 import weak3 from "../../../public/weak3.png";
@@ -196,7 +195,7 @@ const Dashboard = () => {
                 <p>activity</p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
-                <GradientBarChart />
+                <p>GradientBarChart</p>
               </div>
             </div>
             {/* end activity */}
