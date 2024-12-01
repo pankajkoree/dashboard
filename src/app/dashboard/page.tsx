@@ -22,8 +22,17 @@ import strong1 from "../../../public/strong1.png";
 import strong2 from "../../../public/strong2.png";
 import strong3 from "../../../public/strong3.png";
 
+interface Topic {
+  name: string;
+  correct_percentage: number;
+}
+
 interface Data {
   api_secret: string;
+  topics?: {
+    weakest: Topic[];
+    strongest: Topic[];
+  };
 }
 
 const Dashboard = () => {
@@ -201,14 +210,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={weak1}
-                      alt="Covid protocols"
+                      alt={data?.topics?.weakest[0].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.weakest[0].name}</p>
-                    <p>{data?.topics.weakest[0].correct_percentage}</p>
+                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.weakest[0].correct_percentage}</p>
                   </div>
                 </div>
 
@@ -216,14 +225,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={weak2}
-                      alt={data?.topics.weakest[1].name}
+                      alt={data?.topics?.weakest[1].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.weakest[1].name}</p>
-                    <p>{data?.topics.weakest[1].correct_percentage}</p>
+                    <p>{data?.topics?.weakest[1].name}</p>
+                    <p>{data?.topics?.weakest[1].correct_percentage}</p>
                   </div>
                 </div>
 
@@ -231,14 +240,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={weak3}
-                      alt={data?.topics.weakest[2].name}
+                      alt={data?.topics?.weakest[2].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.weakest[2].name}</p>
-                    <p>{data?.topics.weakest[2].correct_percentage}</p>
+                    <p>{data?.topics?.weakest[2].name}</p>
+                    <p>{data?.topics?.weakest[2].correct_percentage}</p>
                   </div>
                 </div>
               </div>
@@ -249,14 +258,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={strong1}
-                      alt={data?.topics.strongest[0].name}
+                      alt={data?.topics?.strongest[0].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.strongest[0].name}</p>
-                    <p>{data?.topics.strongest[0].correct_percentage}</p>
+                    <p>{data?.topics?.strongest[0].name}</p>
+                    <p>{data?.topics?.strongest[0].correct_percentage}</p>
                   </div>
                 </div>
 
@@ -264,14 +273,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={strong2}
-                      alt={data?.topics.strongest[1].name}
+                      alt={data?.topics?.strongest[1].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.strongest[1].name}</p>
-                    <p>{data?.topics.strongest[1].correct_percentage}</p>
+                    <p>{data?.topics?.strongest[1].name}</p>
+                    <p>{data?.topics?.strongest[1].correct_percentage}</p>
                   </div>
                 </div>
 
@@ -279,14 +288,14 @@ const Dashboard = () => {
                   <div>
                     <Image
                       src={strong3}
-                      alt={data?.topics.strongest[2].name}
+                      alt={data?.topics?.strongest[2].name || "image"}
                       width="100"
                       height="100"
                     />
                   </div>
                   <div>
-                    <p>{data?.topics.strongest[2].name}</p>
-                    <p>{data?.topics.strongest[2].correct_percentage}</p>
+                    <p>{data?.topics?.strongest[2].name}</p>
+                    <p>{data?.topics?.strongest[2].correct_percentage}</p>
                   </div>
                 </div>
               </div>
