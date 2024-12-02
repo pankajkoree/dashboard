@@ -335,10 +335,8 @@ const Dashboard = () => {
                     <div>
                       <p>{data?.user_leaderboard?.[0].name}</p>
                     </div>
-                    <div>
-                      <p>{data?.user_leaderboard?.[0].points}Points</p>
-                    </div>
-                    <div>
+                    <div className="relative flex gap-4">
+                      <p>{data?.user_leaderboard?.[0].points} Points</p>
                       <p>
                         {data?.user_leaderboard?.[0].accuracy_percentage}%
                         Correct
@@ -368,10 +366,8 @@ const Dashboard = () => {
                     <div>
                       <p>{data?.user_leaderboard?.[1].name}</p>
                     </div>
-                    <div>
+                    <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[1].points}Points</p>
-                    </div>
-                    <div>
                       <p>
                         {data?.user_leaderboard?.[1].accuracy_percentage}%
                         Correct
@@ -401,10 +397,9 @@ const Dashboard = () => {
                     <div>
                       <p>{data?.user_leaderboard?.[2].name}</p>
                     </div>
-                    <div>
+                    <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[2].points}Points</p>
-                    </div>
-                    <div>
+
                       <p>
                         {data?.user_leaderboard?.[2].accuracy_percentage}%
                         Correct
@@ -434,10 +429,8 @@ const Dashboard = () => {
                     <div>
                       <p>{data?.user_leaderboard?.[3].name}</p>
                     </div>
-                    <div>
+                    <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[3].points}Points</p>
-                    </div>
-                    <div>
                       <p>
                         {data?.user_leaderboard?.[3].accuracy_percentage}%
                         Correct
@@ -458,14 +451,134 @@ const Dashboard = () => {
               {/* end user leaderboard */}
 
               {/* groups leaderboard */}
-              <div>
+              <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <h1>Groups Leaderboard</h1>
+                  <h1>User Leaderboard</h1>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                {/* 1st user */}
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={thomas}
+                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].name}</p>
+                    </div>
+                    <div className="relative flex gap-4">
+                      <p>{data?.user_leaderboard?.[0].points} Points</p>
+                      <p>
+                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative flex">
+                    <p>1</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
+                </div>
+                {/* 1st user */}
+
+                {/* 2nd user */}
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={thisal}
+                      alt={data?.user_leaderboard?.[1].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[1].name}</p>
+                    </div>
+                    <div className="relative flex gap-4">
+                      <p>{data?.user_leaderboard?.[1].points}Points</p>
+                      <p>
+                        {data?.user_leaderboard?.[1].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative flex">
+                    <p>2</p>
+                    <Image
+                      src={leaderboard_arrow_down}
+                      alt="leaderboard_arrow_down"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
+                </div>
+                {/* 2bd user */}
+
+                {/* 3rd user */}
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={helen}
+                      alt={data?.user_leaderboard?.[2].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[2].name}</p>
+                    </div>
+                    <div className="relative flex gap-4">
+                      <p>{data?.user_leaderboard?.[2].points}Points</p>
+
+                      <p>
+                        {data?.user_leaderboard?.[2].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative flex">
+                    <p>2</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
+                </div>
+                {/* 3rd user */}
+
+                {/* 4th user */}
+                <div className="relative flex gap-4">
+                  <div>
+                    <Image
+                      src={lura}
+                      alt={data?.user_leaderboard?.[3].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[3].name}</p>
+                    </div>
+                    <div className="relative flex gap-4">
+                      <p>{data?.user_leaderboard?.[3].points}Points</p>
+                      <p>
+                        {data?.user_leaderboard?.[3].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative flex">
+                    <p>4</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
+                </div>
+                {/* 4th user */}
               </div>
               {/* end groups leaderboard */}
             </div>
