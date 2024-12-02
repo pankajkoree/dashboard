@@ -24,6 +24,8 @@ import thomas from "../../../public/thomas.png";
 import thisal from "../../../public/thisal.png";
 import helen from "../../../public/helen.png";
 import lura from "../../../public/lura.png";
+import leaderboard_arrow_up from "../../../public/leaderboard_arrow_up.png";
+import leaderboard_arrow_down from "../../../public/leaderboard_arrow_down.png";
 
 interface Topic {
   name: string;
@@ -322,7 +324,7 @@ const Dashboard = () => {
                   <h1>User Leaderboard</h1>
                 </div>
                 {/* 1st user */}
-                <div className="relative flex">
+                <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={thomas}
@@ -343,11 +345,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
+                  <div className="relative flex">
+                    <p>1</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
                 </div>
                 {/* 1st user */}
 
                 {/* 2nd user */}
-                <div className="relative flex">
+                <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={thisal}
@@ -368,11 +378,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
+                  <div className="relative flex">
+                    <p>2</p>
+                    <Image
+                      src={leaderboard_arrow_down}
+                      alt="leaderboard_arrow_down"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
                 </div>
                 {/* 2bd user */}
 
                 {/* 3rd user */}
-                <div className="relative flex">
+                <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={helen}
@@ -393,11 +411,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
+                  <div className="relative flex">
+                    <p>2</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
+                  </div>
                 </div>
                 {/* 3rd user */}
 
                 {/* 4th user */}
-                <div className="relative flex">
+                <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={lura}
@@ -417,6 +443,14 @@ const Dashboard = () => {
                         Correct
                       </p>
                     </div>
+                  </div>
+                  <div className="relative flex">
+                    <p>4</p>
+                    <Image
+                      src={leaderboard_arrow_up}
+                      alt="leaderboard_arrow_up"
+                      className="w-[20px] h-[20px]"
+                    />
                   </div>
                 </div>
                 {/* 4th user */}
