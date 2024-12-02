@@ -20,6 +20,10 @@ import weak3 from "../../../public/weak3.png";
 import strong1 from "../../../public/strong1.png";
 import strong2 from "../../../public/strong2.png";
 import strong3 from "../../../public/strong3.png";
+import thomas from "../../../public/thomas.png";
+import thisal from "../../../public/thisal.png";
+import helen from "../../../public/helen.png";
+import lura from "../../../public/lura.png";
 
 interface Topic {
   name: string;
@@ -32,6 +36,11 @@ interface Data {
     weakest: Topic[];
     strongest: Topic[];
   };
+  user_leaderboard?: {
+    name: string;
+    points: number;
+    accuracy_percentage: number;
+  }[];
 }
 
 const Dashboard = () => {
@@ -306,16 +315,123 @@ const Dashboard = () => {
             {/* end topics */}
 
             {/* leaderboard */}
-            <div className="relative grid grid-cols-2 bg-red-400 xl:top-[88px]">
+            <div className="relative grid grid-cols-2 bg-red-400 gap-4 xl:top-[88px]">
               {/* user leaderboard */}
-              <div>
-                <h1>User leaderboard</h1>
+              <div className="relative bg-slate-50 p-4 rounded-2xl">
+                <div>
+                  <h1>User Leaderboard</h1>
+                </div>
+                {/* 1st user */}
+                <div className="relative flex">
+                  <div>
+                    <Image
+                      src={thomas}
+                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].name}</p>
+                    </div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                    </div>
+                    <div>
+                      <p>
+                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 1st user */}
+
+                {/* 2nd user */}
+                <div className="relative flex">
+                  <div>
+                    <Image
+                      src={thomas}
+                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].name}</p>
+                    </div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                    </div>
+                    <div>
+                      <p>
+                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 2bd user */}
+
+                {/* 3rd user */}
+                <div className="relative flex">
+                  <div>
+                    <Image
+                      src={thomas}
+                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].name}</p>
+                    </div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                    </div>
+                    <div>
+                      <p>
+                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 3rd user */}
+
+                {/* 4th user */}
+                <div className="relative flex">
+                  <div>
+                    <Image
+                      src={thomas}
+                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].name}</p>
+                    </div>
+                    <div>
+                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                    </div>
+                    <div>
+                      <p>
+                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        Correct
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 4th user */}
               </div>
               {/* end user leaderboard */}
 
               {/* groups leaderboard */}
               <div>
-                <h1>Group leaderboard</h1>
+                <div>
+                  <h1>Groups Leaderboard</h1>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
               </div>
               {/* end groups leaderboard */}
             </div>
