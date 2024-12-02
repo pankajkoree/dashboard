@@ -203,7 +203,7 @@ const Dashboard = () => {
             {/* topics */}
             <div className="relative grid grid-cols-2 xl:top-[72px] gap-4">
               {/* weakest */}
-              <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
+              <div className="relative flex flex-col p-4 gap-2 bg-slate-50 rounded-2xl">
                 <div className="text-gray-500 font-semibold">
                   Weakest Topics
                 </div>
@@ -253,7 +253,7 @@ const Dashboard = () => {
                 </div>
               </div>
               {/* strongest */}
-              <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
+              <div className="relative flex flex-col p-4 gap-2 bg-slate-50 rounded-2xl">
                 <div className="text-gray-500 font-semibold">
                   Strongest Topics
                 </div>
@@ -304,6 +304,22 @@ const Dashboard = () => {
               </div>
             </div>
             {/* end topics */}
+
+            {/* leaderboard */}
+            <div className="relative grid grid-cols-2 bg-red-400 xl:top-[88px]">
+              {/* user leaderboard */}
+              <div>
+                <h1>User leaderboard</h1>
+              </div>
+              {/* end user leaderboard */}
+
+              {/* groups leaderboard */}
+              <div>
+                <h1>Group leaderboard</h1>
+              </div>
+              {/* end groups leaderboard */}
+            </div>
+            {/* end leaderboard */}
           </div>
         );
       case "Library":
