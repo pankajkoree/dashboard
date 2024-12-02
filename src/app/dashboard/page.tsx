@@ -191,7 +191,7 @@ const Dashboard = () => {
 
             {/* activity */}
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
-              <div className="relative bg-slate-50 rounded-2xl p-4">
+              <div className="bg-slate-50 rounded-2xl p-4 h-[200px]">
                 <p>activity</p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
@@ -204,14 +204,16 @@ const Dashboard = () => {
             <div className="relative grid grid-cols-2 xl:top-[72px] gap-4">
               {/* weakest */}
               <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
-                <div>Weakest Topics</div>
+                <div className="text-gray-500 font-semibold">
+                  Weakest Topics
+                </div>
                 <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={weak1}
                       alt={data?.topics?.weakest[0].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
@@ -225,8 +227,8 @@ const Dashboard = () => {
                     <Image
                       src={weak2}
                       alt={data?.topics?.weakest[1].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
@@ -240,8 +242,8 @@ const Dashboard = () => {
                     <Image
                       src={weak3}
                       alt={data?.topics?.weakest[2].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
@@ -252,14 +254,16 @@ const Dashboard = () => {
               </div>
               {/* strongest */}
               <div className="relative flex flex-col p-4 gap-4 bg-slate-50 rounded-2xl">
-                <div>Strongest Topics</div>
+                <div className="text-gray-500 font-semibold">
+                  Strongest Topics
+                </div>
                 <div className="relative flex gap-4">
                   <div>
                     <Image
                       src={strong1}
                       alt={data?.topics?.strongest[0].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
@@ -273,8 +277,8 @@ const Dashboard = () => {
                     <Image
                       src={strong2}
                       alt={data?.topics?.strongest[1].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
@@ -288,8 +292,8 @@ const Dashboard = () => {
                     <Image
                       src={strong3}
                       alt={data?.topics?.strongest[2].name || "image"}
-                      width="100"
-                      height="100"
+                      width="80"
+                      height="80"
                     />
                   </div>
                   <div>
