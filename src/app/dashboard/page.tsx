@@ -315,7 +315,7 @@ const Dashboard = () => {
             {/* end topics */}
 
             {/* leaderboard */}
-            <div className="relative grid grid-cols-2 bg-red-400 gap-4 xl:top-[88px]">
+            <div className="relative grid grid-cols-2 gap-4 xl:top-[88px]">
               {/* user leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
@@ -350,20 +350,20 @@ const Dashboard = () => {
                 <div className="relative flex">
                   <div>
                     <Image
-                      src={thomas}
-                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                      src={thisal}
+                      alt={data?.user_leaderboard?.[1].name || "user image"}
                     />
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].name}</p>
+                      <p>{data?.user_leaderboard?.[1].name}</p>
                     </div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                      <p>{data?.user_leaderboard?.[1].points}Points</p>
                     </div>
                     <div>
                       <p>
-                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        {data?.user_leaderboard?.[1].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
@@ -375,20 +375,20 @@ const Dashboard = () => {
                 <div className="relative flex">
                   <div>
                     <Image
-                      src={thomas}
-                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                      src={helen}
+                      alt={data?.user_leaderboard?.[2].name || "user image"}
                     />
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].name}</p>
+                      <p>{data?.user_leaderboard?.[2].name}</p>
                     </div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                      <p>{data?.user_leaderboard?.[2].points}Points</p>
                     </div>
                     <div>
                       <p>
-                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        {data?.user_leaderboard?.[2].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
@@ -400,20 +400,20 @@ const Dashboard = () => {
                 <div className="relative flex">
                   <div>
                     <Image
-                      src={thomas}
-                      alt={data?.user_leaderboard?.[0].name || "user image"}
+                      src={lura}
+                      alt={data?.user_leaderboard?.[3].name || "user image"}
                     />
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].name}</p>
+                      <p>{data?.user_leaderboard?.[3].name}</p>
                     </div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].points}Points</p>
+                      <p>{data?.user_leaderboard?.[3].points}Points</p>
                     </div>
                     <div>
                       <p>
-                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        {data?.user_leaderboard?.[3].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
