@@ -333,7 +333,7 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[0].name}</p>
+                      <p className="font-semibold">{data?.user_leaderboard?.[0].name}</p>
                     </div>
                     <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[0].points} Points</p>
@@ -364,7 +364,7 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[1].name}</p>
+                      <p className="font-semibold">{data?.user_leaderboard?.[1].name}</p>
                     </div>
                     <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[1].points}Points</p>
@@ -395,7 +395,7 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[2].name}</p>
+                      <p className="font-semibold">{data?.user_leaderboard?.[2].name}</p>
                     </div>
                     <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[2].points}Points</p>
@@ -427,7 +427,7 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <div>
-                      <p>{data?.user_leaderboard?.[3].name}</p>
+                      <p className="font-semibold">{data?.user_leaderboard?.[3].name}</p>
                     </div>
                     <div className="relative flex gap-4">
                       <p>{data?.user_leaderboard?.[3].points}Points</p>
