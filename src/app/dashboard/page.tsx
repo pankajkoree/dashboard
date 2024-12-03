@@ -344,7 +344,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="relative flex gap-1 items-center">
-                    <p>1</p>
+                    <p className="font-semibold">1</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
@@ -375,7 +375,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="relative flex gap-1 items-center">
-                    <p>2</p>
+                    <p className="font-semibold">2</p>
                     <Image
                       src={leaderboard_arrow_down}
                       alt="leaderboard_arrow_down"
@@ -407,7 +407,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="relative flex gap-1 items-center">
-                    <p>2</p>
+                    <p className="font-semibold">3</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
@@ -438,7 +438,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="relative flex gap-1 items-center">
-                    <p>4</p>
+                    <p className="font-semibold">4</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
