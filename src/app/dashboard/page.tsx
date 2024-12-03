@@ -324,7 +324,7 @@ const Dashboard = () => {
                   <h1>User Leaderboard</h1>
                 </div>
                 {/* 1st user */}
-                <div className="relative flex gap-4">
+                <div className="relative grid grid-cols-3 gap-4">
                   <div>
                     <Image
                       src={thomas}
@@ -343,19 +343,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
+                  <div className="relative flex gap-1 items-center">
                     <p>1</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
                 {/* 1st user */}
 
                 {/* 2nd user */}
-                <div className="relative flex gap-4">
+                <div className="relative grid grid-cols-3 gap-4">
                   <div>
                     <Image
                       src={thisal}
@@ -374,19 +374,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
+                  <div className="relative flex gap-1 items-center">
                     <p>2</p>
                     <Image
                       src={leaderboard_arrow_down}
                       alt="leaderboard_arrow_down"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
                 {/* 2bd user */}
 
                 {/* 3rd user */}
-                <div className="relative flex gap-4">
+                <div className="relative grid grid-cols-3  gap-4">
                   <div>
                     <Image
                       src={helen}
@@ -406,19 +406,19 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
+                  <div className="relative flex gap-1 items-center">
                     <p>2</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
                 {/* 3rd user */}
 
                 {/* 4th user */}
-                <div className="relative flex gap-4">
+                <div className="relative grid grid-cols-3 gap-4">
                   <div>
                     <Image
                       src={lura}
@@ -437,12 +437,12 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
+                  <div className="relative flex gap-1 items-center">
                     <p>4</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
