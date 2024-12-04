@@ -317,7 +317,7 @@ const Dashboard = () => {
             {/* end topics */}
 
             {/* leaderboard */}
-            <div className="relative grid grid-cols-2 gap-4 xl:top-[88px]">
+            <div className="relative grid grid-cols-2 gap-4 xl:h-[248px] xl:top-[88px]">
               {/* user leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
@@ -464,128 +464,139 @@ const Dashboard = () => {
               {/* groups leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <h1>User Leaderboard</h1>
+                  <h1 className="font-semibold">Groups Leaderboard</h1>
                 </div>
                 {/* 1st user */}
-                <div className="relative flex gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 xl:top-4 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={thomas}
                       alt={data?.user_leaderboard?.[0].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
-                      <p>{data?.user_leaderboard?.[0].name}</p>
+                      <p className="font-semibold">
+                        {data?.user_leaderboard?.[0].name}
+                      </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[0].points} Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[0].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
-                    <p>1</p>
+                  <div className="relative flex gap-1 items-center">
+                    <p className="font-semibold">1</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
                 {/* 1st user */}
 
                 {/* 2nd user */}
-                <div className="relative flex gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 xl:top-6 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={thisal}
                       alt={data?.user_leaderboard?.[1].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
-                      <p>{data?.user_leaderboard?.[1].name}</p>
+                      <p className="font-semibold">
+                        {data?.user_leaderboard?.[1].name}
+                      </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[1].points}Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[1].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
-                    <p>2</p>
+                  <div className="relative flex gap-1 items-center">
+                    <p className="font-semibold">2</p>
                     <Image
                       src={leaderboard_arrow_down}
                       alt="leaderboard_arrow_down"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
-                {/* 2bd user */}
+                {/* 2nd user */}
 
                 {/* 3rd user */}
-                <div className="relative flex gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 xl:top-8 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={helen}
                       alt={data?.user_leaderboard?.[2].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
-                      <p>{data?.user_leaderboard?.[2].name}</p>
+                      <p className="font-semibold">
+                        {data?.user_leaderboard?.[2].name}
+                      </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[2].points}Points</p>
-
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[2].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
-                    <p>2</p>
+                  <div className="relative flex gap-1 items-center">
+                    <p className="font-semibold">3</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
                 {/* 3rd user */}
 
                 {/* 4th user */}
-                <div className="relative flex gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 xl:top-10 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={lura}
                       alt={data?.user_leaderboard?.[3].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
-                      <p>{data?.user_leaderboard?.[3].name}</p>
+                      <p className="font-semibold">
+                        {data?.user_leaderboard?.[3].name}
+                      </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[3].points}Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[3].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex">
-                    <p>4</p>
+                  <div className="relative flex gap-1 items-center">
+                    <p className="font-semibold">4</p>
                     <Image
                       src={leaderboard_arrow_up}
                       alt="leaderboard_arrow_up"
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[16px]"
                     />
                   </div>
                 </div>
