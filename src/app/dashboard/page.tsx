@@ -324,7 +324,7 @@ const Dashboard = () => {
                   <h1 className="font-semibold">User Leaderboard</h1>
                 </div>
                 {/* 1st user */}
-                <div className="relative flex items-center gap-4 w-full">
+                <div className="relative flex items-center gap-4 xl:top-4 w-full">
                   <div className="xl:w-[5%]">
                     <Image
                       src={thomas}
@@ -358,7 +358,7 @@ const Dashboard = () => {
                 {/* 1st user */}
 
                 {/* 2nd user */}
-                <div className="relative flex items-center gap-4 w-full">
+                <div className="relative flex items-center gap-4 xl:top-6 w-full">
                   <div className="xl:w-[5%]">
                     <Image
                       src={thisal}
@@ -392,7 +392,7 @@ const Dashboard = () => {
                 {/* 2nd user */}
 
                 {/* 3rd user */}
-                <div className="relative flex items-center gap-4 w-full">
+                <div className="relative flex items-center gap-4 xl:top-8 w-full">
                   <div className="xl:w-[5%]">
                     <Image
                       src={helen}
@@ -426,7 +426,7 @@ const Dashboard = () => {
                 {/* 3rd user */}
 
                 {/* 4th user */}
-                <div className="relative flex items-center gap-4 w-full">
+                <div className="relative flex items-center gap-4 xl:top-10 w-full">
                   <div className="xl:w-[5%]">
                     <Image
                       src={lura}
