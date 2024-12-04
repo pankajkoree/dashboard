@@ -43,6 +43,11 @@ interface Data {
     points: number;
     accuracy_percentage: number;
   }[];
+  groups_leaderboard?: {
+    group_name: string;
+    points_per_user: number;
+    accuracy_percentage: number;
+  }[];
 }
 
 const Dashboard = () => {
@@ -212,10 +217,10 @@ const Dashboard = () => {
             {/* end activity */}
 
             {/* topics */}
-            <div className="relative grid grid-cols-2 xl:top-[72px] gap-4">
+            <div className="relative grid grid-cols-2 text-gray-800 xl:top-[72px] gap-4">
               {/* weakest */}
               <div className="relative flex flex-col p-4 gap-2 bg-slate-50 rounded-2xl">
-                <div className="text-gray-500 font-semibold">
+                <div className="text-gray-600 font-semibold">
                   Weakest Topics
                 </div>
                 <div className="relative flex gap-4">
@@ -229,7 +234,20 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.weakest[0].name}</p>
-                    <p>{data?.topics?.weakest[0].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
 
@@ -244,7 +262,20 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.weakest[1].name}</p>
-                    <p>{data?.topics?.weakest[1].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.weakest[1]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.weakest[1].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
 
@@ -259,13 +290,26 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.weakest[2].name}</p>
-                    <p>{data?.topics?.weakest[2].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.weakest[2]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.weakest[2].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
               </div>
               {/* strongest */}
               <div className="relative flex flex-col p-4 gap-2 bg-slate-50 rounded-2xl">
-                <div className="text-gray-500 font-semibold">
+                <div className="text-gray-600 font-semibold">
                   Strongest Topics
                 </div>
                 <div className="relative flex gap-4">
@@ -279,7 +323,20 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.strongest[0].name}</p>
-                    <p>{data?.topics?.strongest[0].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-green-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.strongest[0]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.strongest[0].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
 
@@ -294,7 +351,20 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.strongest[1].name}</p>
-                    <p>{data?.topics?.strongest[1].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-green-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.strongest[1]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.strongest[1].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
 
@@ -309,7 +379,20 @@ const Dashboard = () => {
                   </div>
                   <div>
                     <p>{data?.topics?.strongest[2].name}</p>
-                    <p>{data?.topics?.strongest[2].correct_percentage}</p>
+                    <p className="relative flex items-center">
+                      <p className="display flex flex-col w-[590px] mr-2">
+                        {" "}
+                        <p className="bg-green-200 h-[14px] w-full rounded-xl"></p>
+                        <p
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-400 h-[14px] -mt-[14px] rounded-xl`}
+                          style={{
+                            width: `${data?.topics?.strongest[2]?.correct_percentage}%`,
+                          }}
+                        ></p>
+                      </p>
+                      {data?.topics?.strongest[2].correct_percentage}%{"  "}
+                      <span className="text-gray-400 ml-1">Correct</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -317,11 +400,13 @@ const Dashboard = () => {
             {/* end topics */}
 
             {/* leaderboard */}
-            <div className="relative grid grid-cols-2 gap-4 xl:h-[248px] xl:top-[88px]">
+            <div className="relative grid grid-cols-2 gap-4 text-gray-800 xl:h-[248px] xl:top-[88px]">
               {/* user leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <h1 className="font-semibold">User Leaderboard</h1>
+                  <h1 className="font-semibold text-gray-600">
+                    User Leaderboard
+                  </h1>
                 </div>
                 {/* 1st user */}
                 <div className="relative flex items-center gap-4 xl:top-4 w-full">
@@ -372,7 +457,7 @@ const Dashboard = () => {
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[1].points}Points</p>
+                      <p>{data?.user_leaderboard?.[1].points} Points</p>
                       <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[1].accuracy_percentage}%
@@ -406,7 +491,7 @@ const Dashboard = () => {
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[2].points}Points</p>
+                      <p>{data?.user_leaderboard?.[2].points} Points</p>
                       <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[2].accuracy_percentage}%
@@ -440,7 +525,7 @@ const Dashboard = () => {
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[3].points}Points</p>
+                      <p>{data?.user_leaderboard?.[3].points} Points</p>
                       <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[3].accuracy_percentage}%
@@ -464,27 +549,26 @@ const Dashboard = () => {
               {/* groups leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <h1 className="font-semibold">Groups Leaderboard</h1>
+                  <h1 className="font-semibold text-gray-600">
+                    Groups Leaderboard
+                  </h1>
                 </div>
                 {/* 1st user */}
                 <div className="relative flex items-center gap-4 xl:top-4 w-full">
-                  <div className="xl:w-[5%]">
-                    <Image
-                      src={thomas}
-                      alt={data?.user_leaderboard?.[0].name || "user image"}
-                    />
-                  </div>
-                  <div className="xl:w-[90%]">
+                  <div className="xl:w-[95%]">
                     <div>
                       <p className="font-semibold">
-                        {data?.user_leaderboard?.[0].name}
+                        {data?.groups_leaderboard?.[0].group_name}
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[0].points} Points</p>
+                      <p>
+                        {data?.groups_leaderboard?.[0].points_per_user} Points /
+                        User
+                      </p>
                       <p>-</p>
                       <p>
-                        {data?.user_leaderboard?.[0].accuracy_percentage}%
+                        {data?.groups_leaderboard?.[0].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
@@ -502,23 +586,20 @@ const Dashboard = () => {
 
                 {/* 2nd user */}
                 <div className="relative flex items-center gap-4 xl:top-6 w-full">
-                  <div className="xl:w-[5%]">
-                    <Image
-                      src={thisal}
-                      alt={data?.user_leaderboard?.[1].name || "user image"}
-                    />
-                  </div>
-                  <div className="xl:w-[90%]">
+                  <div className="xl:w-[95%]">
                     <div>
                       <p className="font-semibold">
-                        {data?.user_leaderboard?.[1].name}
+                        {data?.groups_leaderboard?.[1].group_name}
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[1].points}Points</p>
+                      <p>
+                        {data?.groups_leaderboard?.[1].points_per_user} Points /
+                        User
+                      </p>
                       <p>-</p>
                       <p>
-                        {data?.user_leaderboard?.[1].accuracy_percentage}%
+                        {data?.groups_leaderboard?.[1].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
@@ -536,23 +617,20 @@ const Dashboard = () => {
 
                 {/* 3rd user */}
                 <div className="relative flex items-center gap-4 xl:top-8 w-full">
-                  <div className="xl:w-[5%]">
-                    <Image
-                      src={helen}
-                      alt={data?.user_leaderboard?.[2].name || "user image"}
-                    />
-                  </div>
-                  <div className="xl:w-[90%]">
+                  <div className="xl:w-[95%]">
                     <div>
                       <p className="font-semibold">
-                        {data?.user_leaderboard?.[2].name}
+                        {data?.groups_leaderboard?.[2].group_name}
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[2].points}Points</p>
+                      <p>
+                        {data?.groups_leaderboard?.[2].points_per_user} Points /
+                        User
+                      </p>
                       <p>-</p>
                       <p>
-                        {data?.user_leaderboard?.[2].accuracy_percentage}%
+                        {data?.groups_leaderboard?.[2].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
@@ -570,23 +648,20 @@ const Dashboard = () => {
 
                 {/* 4th user */}
                 <div className="relative flex items-center gap-4 xl:top-10 w-full">
-                  <div className="xl:w-[5%]">
-                    <Image
-                      src={lura}
-                      alt={data?.user_leaderboard?.[3].name || "user image"}
-                    />
-                  </div>
-                  <div className="xl:w-[90%]">
+                  <div className="xl:w-[95%]">
                     <div>
                       <p className="font-semibold">
-                        {data?.user_leaderboard?.[3].name}
+                        {data?.groups_leaderboard?.[3].group_name}
                       </p>
                     </div>
                     <div className="relative flex text-xs gap-4">
-                      <p>{data?.user_leaderboard?.[3].points}Points</p>
+                      <p>
+                        {data?.groups_leaderboard?.[3].points_per_user} Points /
+                        User
+                      </p>
                       <p>-</p>
                       <p>
-                        {data?.user_leaderboard?.[3].accuracy_percentage}%
+                        {data?.groups_leaderboard?.[3].accuracy_percentage}%
                         Correct
                       </p>
                     </div>
