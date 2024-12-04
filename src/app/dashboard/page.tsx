@@ -321,24 +321,25 @@ const Dashboard = () => {
               {/* user leaderboard */}
               <div className="relative bg-slate-50 p-4 rounded-2xl">
                 <div>
-                  <h1>User Leaderboard</h1>
+                  <h1 className="font-semibold">User Leaderboard</h1>
                 </div>
                 {/* 1st user */}
-                <div className="relative grid grid-cols-3 gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={thomas}
                       alt={data?.user_leaderboard?.[0].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
                       <p className="font-semibold">
                         {data?.user_leaderboard?.[0].name}
                       </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[0].points} Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[0].accuracy_percentage}%
                         Correct
@@ -357,21 +358,22 @@ const Dashboard = () => {
                 {/* 1st user */}
 
                 {/* 2nd user */}
-                <div className="relative grid grid-cols-3 gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={thisal}
                       alt={data?.user_leaderboard?.[1].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
                       <p className="font-semibold">
                         {data?.user_leaderboard?.[1].name}
                       </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[1].points}Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[1].accuracy_percentage}%
                         Correct
@@ -387,25 +389,25 @@ const Dashboard = () => {
                     />
                   </div>
                 </div>
-                {/* 2bd user */}
+                {/* 2nd user */}
 
                 {/* 3rd user */}
-                <div className="relative grid grid-cols-3  gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={helen}
                       alt={data?.user_leaderboard?.[2].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
                       <p className="font-semibold">
                         {data?.user_leaderboard?.[2].name}
                       </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[2].points}Points</p>
-
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[2].accuracy_percentage}%
                         Correct
@@ -424,21 +426,22 @@ const Dashboard = () => {
                 {/* 3rd user */}
 
                 {/* 4th user */}
-                <div className="relative flex items-center gap-4">
-                  <div>
+                <div className="relative flex items-center gap-4 w-full">
+                  <div className="xl:w-[5%]">
                     <Image
                       src={lura}
                       alt={data?.user_leaderboard?.[3].name || "user image"}
                     />
                   </div>
-                  <div>
+                  <div className="xl:w-[90%]">
                     <div>
                       <p className="font-semibold">
                         {data?.user_leaderboard?.[3].name}
                       </p>
                     </div>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex text-xs gap-4">
                       <p>{data?.user_leaderboard?.[3].points}Points</p>
+                      <p>-</p>
                       <p>
                         {data?.user_leaderboard?.[3].accuracy_percentage}%
                         Correct
