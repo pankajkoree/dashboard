@@ -239,7 +239,7 @@ const Dashboard = () => {
                         {" "}
                         <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
                         <p
-                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
                             width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
                           }}
@@ -267,7 +267,7 @@ const Dashboard = () => {
                         {" "}
                         <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
                         <p
-                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
                             width: `${data?.topics?.weakest[1]?.correct_percentage}%`,
                           }}
@@ -295,7 +295,7 @@ const Dashboard = () => {
                         {" "}
                         <p className="bg-red-200 h-[14px] w-full rounded-xl"></p>
                         <p
-                          className={`relative flex bg-gradient-to-r from-orange-300 to-red-400 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
                             width: `${data?.topics?.weakest[2]?.correct_percentage}%`,
                           }}
