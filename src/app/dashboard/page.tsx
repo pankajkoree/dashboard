@@ -683,7 +683,7 @@ const Dashboard = () => {
           </div>
         );
       case "Library":
-        return <div className="p-4">Library section</div>;
+        return <div className="p-4">Library section for future work</div>;
       case "People":
         return <div className="p-4">People section.</div>;
       case "Activities":
