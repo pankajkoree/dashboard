@@ -33,7 +33,6 @@ interface Topic {
   correct_percentage: number;
 }
 
-
 // interface for data
 interface Data {
   api_secret: string;
@@ -51,6 +50,12 @@ interface Data {
     points_per_user: number;
     accuracy_percentage: number;
   }[];
+  metrics?:{
+    active_users?:{};
+    questions_answered: string;
+    average_session_length_seconds: number;
+    starting_knowledge_percentage: number;
+  }
 }
 
 const Dashboard = () => {
@@ -211,42 +216,37 @@ const Dashboard = () => {
 
             {/* activity */}
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
-              <div className="relative grid grid-cols bg-slate-50  rounded-2xl p-4 h-[200px]">
+              <div className="relative grid grid-cols bg-slate-50  rounded-2xl p-4 h-[280px]">
                 {/* active users */}
-               <div>
-
-               </div>
+                <div className="relative">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics.active_users.current}</span>
+                    {"/"}
+                    <span>{data?.metrics.active_users.current}</span>
+                  </p>
+                </div>
                 {/* end active users */}
 
                 {/* question answered */}
-               <div>
-                
-               </div>
-               {/* end question answered */}
+                <div></div>
+                {/* end question answered */}
 
-               {/* average session length */}
-               <div>
-                
-               </div>
-               {/* average session length */}
+                {/* average session length */}
+                <div></div>
+                {/* average session length */}
 
-               {/* starting knowledge */}
-               <div>
-                
-               </div>
+                {/* starting knowledge */}
+                <div></div>
                 {/* end starting knowledge */}
 
                 {/* current knowledge */}
-               <div>
-                
-               </div>
-               {/* current knowledge */}
+                <div></div>
+                {/* current knowledge */}
 
-               {/* knowledge gain */}
-               <div>
-                
-               </div>
-               {/* knowledge gain */}
+                {/* knowledge gain */}
+                <div></div>
+                {/* knowledge gain */}
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
                 <p>place to show bar chart</p>
