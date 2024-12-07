@@ -50,12 +50,16 @@ interface Data {
     points_per_user: number;
     accuracy_percentage: number;
   }[];
-  metrics?:{
-    active_users?:{};
+  metrics?: {
+    active_users?: {
+      current: number;
+      total: number;
+    };
     questions_answered: string;
     average_session_length_seconds: number;
     starting_knowledge_percentage: number;
-  }
+    current_knowledge_percentage: number;
+  };
 }
 
 const Dashboard = () => {
