@@ -27,11 +27,14 @@ import lura from "../../../public/lura.png";
 import leaderboard_arrow_up from "../../../public/leaderboard_arrow_up.png";
 import leaderboard_arrow_down from "../../../public/leaderboard_arrow_down.png";
 
+// interface for topic
 interface Topic {
   name: string;
   correct_percentage: number;
 }
 
+
+// interface for data
 interface Data {
   api_secret: string;
   topics?: {
@@ -77,6 +80,7 @@ const Dashboard = () => {
     fetchData();
   }, []);
 
+  // download function
   const clickDownload = async () => {
     if (data && data.api_secret) {
       console.log(data.api_secret);
@@ -103,6 +107,7 @@ const Dashboard = () => {
     }
   };
 
+  // function to change icon
   const changeDropDownTimeFrame = (): void => {
     setIsOpenTime((prevState) => !prevState);
   };
@@ -115,6 +120,7 @@ const Dashboard = () => {
     setIsOpenTopic((prevState) => !prevState);
   };
 
+  // content for reports
   const renderContent = () => {
     switch (activeView) {
       case "Reports":
