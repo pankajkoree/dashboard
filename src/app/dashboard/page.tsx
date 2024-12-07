@@ -211,8 +211,42 @@ const Dashboard = () => {
 
             {/* activity */}
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
-              <div className="bg-slate-50 rounded-2xl p-4 h-[200px]">
-                <p>activity</p>
+              <div className="relative grid grid-cols bg-slate-50  rounded-2xl p-4 h-[200px]">
+                {/* active users */}
+               <div>
+
+               </div>
+                {/* end active users */}
+
+                {/* question answered */}
+               <div>
+                
+               </div>
+               {/* end question answered */}
+
+               {/* average session length */}
+               <div>
+                
+               </div>
+               {/* average session length */}
+
+               {/* starting knowledge */}
+               <div>
+                
+               </div>
+                {/* end starting knowledge */}
+
+                {/* current knowledge */}
+               <div>
+                
+               </div>
+               {/* current knowledge */}
+
+               {/* knowledge gain */}
+               <div>
+                
+               </div>
+               {/* knowledge gain */}
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
                 <p>place to show bar chart</p>
