@@ -26,7 +26,7 @@ import helen from "../../../public/helen.png";
 import lura from "../../../public/lura.png";
 import leaderboard_arrow_up from "../../../public/leaderboard_arrow_up.png";
 import leaderboard_arrow_down from "../../../public/leaderboard_arrow_down.png";
-import graph from "../../../public/Graph.png";
+import graph from "../../../public/graph.png";
 
 // interface for topic
 interface Topic {
@@ -246,7 +246,7 @@ const Dashboard = () => {
             {/* end horizontal bar */}
 
             {/* activity */}
-            <div className="relative grid grid-cols-2 xl:top-14 gap-4"> 
+            <div className="relative grid grid-cols-2 xl:top-14 gap-4">
               <div className="relative grid grid-cols-3 gap-4 rounded-2xl h-[280px]">
                 {/* active users */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl">
