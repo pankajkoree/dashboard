@@ -222,10 +222,10 @@ const Dashboard = () => {
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
               <div className="relative grid grid-cols-3 gap-4 rounded-2xl h-[280px]">
                 {/* active users */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p className="mt-1">
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
@@ -237,10 +237,10 @@ const Dashboard = () => {
                 {/* end active users */}
 
                 {/* question answered */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
@@ -252,10 +252,10 @@ const Dashboard = () => {
                 {/* end question answered */}
 
                 {/* average session length */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
@@ -267,10 +267,10 @@ const Dashboard = () => {
                 {/* average session length */}
 
                 {/* starting knowledge */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
@@ -282,10 +282,10 @@ const Dashboard = () => {
                 {/* end starting knowledge */}
 
                 {/* current knowledge */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
@@ -297,10 +297,10 @@ const Dashboard = () => {
                 {/* current knowledge */}
 
                 {/* knowledge gain */}
-                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
                     <p>Active Users</p>
-                    <p className="mt-6">
+                    <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
                       </span>
