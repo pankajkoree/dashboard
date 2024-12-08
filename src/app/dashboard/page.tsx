@@ -129,6 +129,33 @@ const Dashboard = () => {
     setIsOpenTopic((prevState) => !prevState);
   };
 
+  // storing the complete given seconds into minute and seconds
+  let minute = Math.floor(
+    (data?.metrics?.average_session_length_seconds ?? 0) / 60
+  );
+  let seconds = (data?.metrics?.average_session_length_seconds ?? 0) % 60;
+
+  // Increment or decrement in knowledge
+  let knowledge = 0;
+  let startingKnowledge = 0;
+  let currentKnowledge = 0;
+
+  if (
+    (data?.metrics?.starting_knowledge_percentage ?? 0) >
+    (data?.metrics?.current_knowledge_percentage ?? 0)
+  ) {
+    startingKnowledge = data?.metrics?.starting_knowledge_percentage ?? 0;
+    currentKnowledge = data?.metrics?.current_knowledge_percentage ?? 0;
+
+    knowledge = startingKnowledge - currentKnowledge;
+  } else {
+    startingKnowledge = data?.metrics?.starting_knowledge_percentage ?? 0;
+    currentKnowledge = data?.metrics?.current_knowledge_percentage ?? 0;
+
+    knowledge = currentKnowledge - startingKnowledge;
+  }
+
+
   // content for reports
   const renderContent = () => {
     switch (activeView) {
@@ -242,7 +269,10 @@ const Dashboard = () => {
                     <p>Questions Answered</p>
                     <p>
                       <span className="font-bold text-2xl">
-                        {data?.metrics?.questions_answered}
+                        {/* this regex will convert value into indian style */}
+                        {data?.metrics?.questions_answered
+                          ?.toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </span>
                     </p>
                   </div>
@@ -255,7 +285,7 @@ const Dashboard = () => {
                     <p>Av. Session Length</p>
                     <p>
                       <span className="font-bold text-2xl">
-                        {data?.metrics?.average_session_length_seconds}
+                        {minute}m {seconds}s
                       </span>
                     </p>
                   </div>
@@ -268,10 +298,8 @@ const Dashboard = () => {
                     <p>Starting Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
-                        {data?.metrics?.active_users?.current}
+                        {data?.metrics?.starting_knowledge_percentage}%
                       </span>
-                      {"/"}
-                      <span>{data?.metrics?.active_users?.total}</span>
                     </p>
                   </div>
                 </div>
@@ -280,13 +308,11 @@ const Dashboard = () => {
                 {/* current knowledge */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Active Users</p>
+                    <p>Current Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
-                        {data?.metrics?.active_users?.current}
+                        {data?.metrics?.current_knowledge_percentage}%
                       </span>
-                      {"/"}
-                      <span>{data?.metrics?.active_users?.total}</span>
                     </p>
                   </div>
                 </div>
@@ -295,13 +321,13 @@ const Dashboard = () => {
                 {/* knowledge gain */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Active Users</p>
+                    <p>Gain Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
-                        {data?.metrics?.active_users?.current}
+                        {startingKnowledge > currentKnowledge
+                          ? -knowledge
+                          : +knowledge}
                       </span>
-                      {"/"}
-                      <span>{data?.metrics?.active_users?.total}</span>
                     </p>
                   </div>
                 </div>
