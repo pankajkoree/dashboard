@@ -55,7 +55,7 @@ interface Data {
       current: number;
       total: number;
     };
-    questions_answered: string;
+    questions_answered: number;
     average_session_length_seconds: number;
     starting_knowledge_percentage: number;
     current_knowledge_percentage: number;
@@ -220,36 +220,71 @@ const Dashboard = () => {
 
             {/* activity */}
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
-              <div className="relative grid grid-cols bg-slate-50  rounded-2xl p-4 h-[280px]">
+              <div className="relative grid grid-cols-3 rounded-2xl h-[280px]">
                 {/* active users */}
-                <div className="relative">
+                <div className="relative bg-slate-50">
                   <p>Active Users</p>
                   <p>
-                    <span>{data?.metrics.active_users.current}</span>
+                    <span>{data?.metrics?.active_users?.current}</span>
                     {"/"}
-                    <span>{data?.metrics.active_users.current}</span>
+                    <span>{data?.metrics?.active_users?.current}</span>
                   </p>
                 </div>
                 {/* end active users */}
 
                 {/* question answered */}
-                <div></div>
+                <div className="relative bg-slate-50">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics?.active_users?.current}</span>
+                    {"/"}
+                    <span>{data?.metrics?.active_users?.current}</span>
+                  </p>
+                </div>
                 {/* end question answered */}
 
                 {/* average session length */}
-                <div></div>
+                <div className="relative bg-slate-50">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics?.active_users?.current}</span>
+                    {"/"}
+                    <span>{data?.metrics?.active_users?.current}</span>
+                  </p>
+                </div>
                 {/* average session length */}
 
                 {/* starting knowledge */}
-                <div></div>
+                <div className="relative bg-slate-50">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics?.active_users?.current}</span>
+                    {"/"}
+                    <span>{data?.metrics?.active_users?.current}</span>
+                  </p>
+                </div>
                 {/* end starting knowledge */}
 
                 {/* current knowledge */}
-                <div></div>
+                <div className="relative bg-slate-50">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics?.active_users?.current}</span>
+                    {"/"}
+                    <span>{data?.metrics?.active_users?.current}</span>
+                  </p>
+                </div>
                 {/* current knowledge */}
 
                 {/* knowledge gain */}
-                <div></div>
+                <div className="relative bg-slate-50">
+                  <p>Active Users</p>
+                  <p>
+                    <span>{data?.metrics?.active_users?.current}</span>
+                    {"/"}
+                    <span>{data?.metrics?.active_users?.current}</span>
+                  </p>
+                </div>
                 {/* knowledge gain */}
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
