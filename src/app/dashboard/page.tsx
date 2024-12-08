@@ -246,7 +246,7 @@ const Dashboard = () => {
             {/* end horizontal bar */}
 
             {/* activity */}
-            <div className="relative grid grid-cols-2 xl:top-14 gap-4">
+            <div className="relative grid grid-cols-2 xl:top-14 gap-4"> 
               <div className="relative grid grid-cols-3 gap-4 rounded-2xl h-[280px]">
                 {/* active users */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl">
