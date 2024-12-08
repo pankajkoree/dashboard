@@ -26,6 +26,7 @@ import helen from "../../../public/helen.png";
 import lura from "../../../public/lura.png";
 import leaderboard_arrow_up from "../../../public/leaderboard_arrow_up.png";
 import leaderboard_arrow_down from "../../../public/leaderboard_arrow_down.png";
+import graph from "../../../public/Graph.png";
 
 // interface for topic
 interface Topic {
@@ -250,7 +251,7 @@ const Dashboard = () => {
                 {/* active users */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl">
                   <div>
-                    <p>Active Users</p>
+                    <p className="font-semibold">Active Users</p>
                     <p className="mt-1">
                       <span className="font-bold text-2xl">
                         {data?.metrics?.active_users?.current}
@@ -265,7 +266,7 @@ const Dashboard = () => {
                 {/* question answered */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Questions Answered</p>
+                    <p className="font-semibold">Questions Answered</p>
                     <p>
                       <span className="font-bold text-2xl">
                         {/* this regex will convert value into indian style */}
@@ -281,7 +282,7 @@ const Dashboard = () => {
                 {/* average session length */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Av. Session Length</p>
+                    <p className="font-semibold">Av. Session Length</p>
                     <p>
                       <span className="font-bold text-2xl">
                         {minute}m {seconds}s
@@ -294,12 +295,13 @@ const Dashboard = () => {
                 {/* starting knowledge */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Starting Knowledge</p>
+                    <p className="font-semibold">Starting Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.starting_knowledge_percentage}%
                       </span>
                     </p>
+                    <Image src={graph} alt="graph" className="ml-9 mt-2" />
                   </div>
                 </div>
                 {/* end starting knowledge */}
@@ -307,12 +309,13 @@ const Dashboard = () => {
                 {/* current knowledge */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Current Knowledge</p>
+                    <p className="font-semibold">Current Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
                         {data?.metrics?.current_knowledge_percentage}%
                       </span>
                     </p>
+                    <Image src={graph} alt="graph" className="ml-9 mt-2" />
                   </div>
                 </div>
                 {/* current knowledge */}
@@ -320,7 +323,7 @@ const Dashboard = () => {
                 {/* knowledge gain */}
                 <div className="flex p-4 h-[132px] bg-slate-50 rounded-2xl ml-1">
                   <div>
-                    <p>Gain Knowledge</p>
+                    <p className="font-semibold">Gain Knowledge</p>
                     <p>
                       <span className="font-bold text-2xl">
                         {startingKnowledge > currentKnowledge
@@ -328,6 +331,7 @@ const Dashboard = () => {
                           : `+${knowledge}%`}
                       </span>
                     </p>
+                    <Image src={graph} alt="graph" className="ml-9 mt-2" />
                   </div>
                 </div>
                 {/* knowledge gain */}
