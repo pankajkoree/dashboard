@@ -155,7 +155,6 @@ const Dashboard = () => {
     knowledge = currentKnowledge - startingKnowledge;
   }
 
-
   // content for reports
   const renderContent = () => {
     switch (activeView) {
@@ -325,8 +324,8 @@ const Dashboard = () => {
                     <p>
                       <span className="font-bold text-2xl">
                         {startingKnowledge > currentKnowledge
-                          ? -knowledge
-                          : +knowledge}
+                          ? `-${knowledge}%`
+                          : `+${knowledge}%`}
                       </span>
                     </p>
                   </div>
