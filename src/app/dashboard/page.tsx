@@ -220,70 +220,94 @@ const Dashboard = () => {
 
             {/* activity */}
             <div className="relative grid grid-cols-2 xl:top-14 gap-4">
-              <div className="relative grid grid-cols-3 rounded-2xl h-[280px]">
+              <div className="relative grid grid-cols-3 gap-4 rounded-2xl h-[280px]">
                 {/* active users */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* end active users */}
 
                 {/* question answered */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* end question answered */}
 
                 {/* average session length */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* average session length */}
 
                 {/* starting knowledge */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* end starting knowledge */}
 
                 {/* current knowledge */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* current knowledge */}
 
                 {/* knowledge gain */}
-                <div className="relative bg-slate-50">
-                  <p>Active Users</p>
-                  <p>
-                    <span>{data?.metrics?.active_users?.current}</span>
-                    {"/"}
-                    <span>{data?.metrics?.active_users?.current}</span>
-                  </p>
+                <div className="flex p-4 h-full bg-slate-50 rounded-2xl ml-1">
+                  <div>
+                    <p>Active Users</p>
+                    <p className="mt-6">
+                      <span className="font-bold text-2xl">
+                        {data?.metrics?.active_users?.current}
+                      </span>
+                      {"/"}
+                      <span>{data?.metrics?.active_users?.total}</span>
+                    </p>
+                  </div>
                 </div>
                 {/* knowledge gain */}
               </div>
