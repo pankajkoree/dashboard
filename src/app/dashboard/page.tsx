@@ -338,7 +338,7 @@ const Dashboard = () => {
                     />
                   </div>
                   <div>
-                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.weakest[1].name}</p>
                     <p className="relative flex items-center">
                       <span className="display flex flex-col w-[590px] mr-2">
                         {" "}
@@ -346,11 +346,11 @@ const Dashboard = () => {
                         <span
                           className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
-                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                            width: `${data?.topics?.weakest[1]?.correct_percentage}%`,
                           }}
                         ></span>
                       </span>
-                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      {data?.topics?.weakest[1].correct_percentage}%{"  "}
                       <span className="text-gray-400 ml-1">Correct</span>
                     </p>
                   </div>
@@ -366,7 +366,7 @@ const Dashboard = () => {
                     />
                   </div>
                   <div>
-                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.weakest[2].name}</p>
                     <p className="relative flex items-center">
                       <span className="display flex flex-col w-[590px] mr-2">
                         {" "}
@@ -374,11 +374,11 @@ const Dashboard = () => {
                         <span
                           className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
-                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                            width: `${data?.topics?.weakest[2]?.correct_percentage}%`,
                           }}
                         ></span>
                       </span>
-                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      {data?.topics?.weakest[2].correct_percentage}%{"  "}
                       <span className="text-gray-400 ml-1">Correct</span>
                     </p>
                   </div>
@@ -399,19 +399,19 @@ const Dashboard = () => {
                     />
                   </div>
                   <div>
-                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.strongest[0].name}</p>
                     <p className="relative flex items-center">
                       <span className="display flex flex-col w-[590px] mr-2">
                         {" "}
-                        <span className="bg-red-200 h-[14px] w-full rounded-xl"></span>
+                        <span className="bg-green-200 h-[14px] w-full rounded-xl"></span>
                         <span
-                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
-                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                            width: `${data?.topics?.strongest[0]?.correct_percentage}%`,
                           }}
                         ></span>
                       </span>
-                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      {data?.topics?.strongest[0].correct_percentage}%{"  "}
                       <span className="text-gray-400 ml-1">Correct</span>
                     </p>
                   </div>
@@ -427,19 +427,19 @@ const Dashboard = () => {
                     />
                   </div>
                   <div>
-                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.strongest[1].name}</p>
                     <p className="relative flex items-center">
                       <span className="display flex flex-col w-[590px] mr-2">
                         {" "}
-                        <span className="bg-red-200 h-[14px] w-full rounded-xl"></span>
+                        <span className="bg-green-200 h-[14px] w-full rounded-xl"></span>
                         <span
-                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
-                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                            width: `${data?.topics?.strongest[1]?.correct_percentage}%`,
                           }}
                         ></span>
                       </span>
-                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      {data?.topics?.strongest[1].correct_percentage}%{"  "}
                       <span className="text-gray-400 ml-1">Correct</span>
                     </p>
                   </div>
@@ -455,19 +455,19 @@ const Dashboard = () => {
                     />
                   </div>
                   <div>
-                    <p>{data?.topics?.weakest[0].name}</p>
+                    <p>{data?.topics?.strongest[2].name}</p>
                     <p className="relative flex items-center">
                       <span className="display flex flex-col w-[590px] mr-2">
                         {" "}
-                        <span className="bg-red-200 h-[14px] w-full rounded-xl"></span>
+                        <span className="bg-green-200 h-[14px] w-full rounded-xl"></span>
                         <span
-                          className={`relative flex bg-gradient-to-r from-orange-400 to-red-500 h-[14px] -mt-[14px] rounded-xl`}
+                          className={`relative flex bg-gradient-to-r from-lime-500 to-green-500 h-[14px] -mt-[14px] rounded-xl`}
                           style={{
-                            width: `${data?.topics?.weakest[0]?.correct_percentage}%`,
+                            width: `${data?.topics?.strongest[2]?.correct_percentage}%`,
                           }}
                         ></span>
                       </span>
-                      {data?.topics?.weakest[0].correct_percentage}%{"  "}
+                      {data?.topics?.strongest[2].correct_percentage}%{"  "}
                       <span className="text-gray-400 ml-1">Correct</span>
                     </p>
                   </div>
