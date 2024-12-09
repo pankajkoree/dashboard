@@ -364,7 +364,9 @@ const Dashboard = () => {
                 <div className="relative flex h-[2px] bg-gray-200"></div>
                 {/* activity bar */}
                 {/* bar chart */}
-                <div className="bg-red-400 w-full h-48"></div>
+                <div className="bg-red-400 w-full h-48">
+                  
+                </div>
                 {/* bar chart */}
 
                 {/* month div */}
