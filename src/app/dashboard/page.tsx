@@ -387,11 +387,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[1]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[1]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -403,11 +403,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[2]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[2]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -419,11 +419,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[3]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[3]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -435,11 +435,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[4]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[4]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -451,11 +451,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[5]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[5]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -467,11 +467,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[6]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[6]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -483,11 +483,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[7]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[7]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -499,11 +499,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[8]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[8]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -515,11 +515,11 @@ const Dashboard = () => {
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[9]?.value ?? 0) / 400) *
                           100
                         }%`,
                         height: `${
-                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          ((data?.activity?.monthly?.[9]?.value ?? 0) / 400) *
                           100
                         }%`,
                       }}
@@ -530,6 +530,10 @@ const Dashboard = () => {
                     <div
                       className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[10]?.value ?? 0) / 400) *
+                          100
+                        }%`,
                         height: `${
                           (data?.activity?.monthly?.[10]?.value ?? 0) / 4
                         }%`,
