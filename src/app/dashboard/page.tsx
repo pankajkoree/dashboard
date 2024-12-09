@@ -364,11 +364,11 @@ const Dashboard = () => {
                 <div className="relative flex h-[2px] bg-gray-200"></div>
                 {/* activity bar */}
                 {/* bar chart */}
-                <div className="relative flex">
-                  <div>
-                    <div className="relative w-[16px] h-40 bg-blue-100"></div>
+                <div className="relative flex top-2 left-10 gap-2 justify-center">
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
                     <div
-                      className="relative w-[16px] flex bg-blue-400"
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
                       style={{
                         top: `-${
                           ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
@@ -381,13 +381,186 @@ const Dashboard = () => {
                       }}
                     ></div>
                   </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        height: `${
+                          (data?.activity?.monthly?.[10]?.value ?? 0) / 4
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="w-[80px]">
+                    <div className="relative w-[16px] h-48 bg-blue-100 rounded-2xl"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400 rounded-2xl"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[11]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[11]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
                 </div>
                 {/* bar chart */}
 
                 {/* month div */}
-                <div className="relative flex left-10 gap-9">
+                <div className="relative flex top-4 left-10">
                   {data?.activity?.monthly?.map((item, index) => (
-                    <p key={index}>{item.month}</p>
+                    <p key={index} className="w-[80px]">
+                      {item.month}
+                    </p>
                   )) || <p>No data available</p>}
                 </div>
                 {/* end month div */}
