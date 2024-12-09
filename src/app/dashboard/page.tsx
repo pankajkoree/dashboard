@@ -337,7 +337,20 @@ const Dashboard = () => {
                 {/* knowledge gain */}
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
-                <p>place to show bar chart</p>
+                {/* activity header */}
+                <div></div>
+                {/* end activity header */}
+
+                {/* activity bar */}
+                <div className="relative flex h-[1px] bg-gray-400 xl:top-6"></div>
+                {/* activity bar */}
+                {/* bar chart */}
+                <div></div>
+                {/* bar chart */}
+                {/* month div */}
+                <div></div>
+                {/* end month div */}
+                <div></div>
               </div>
             </div>
             {/* end activity */}
