@@ -364,8 +364,23 @@ const Dashboard = () => {
                 <div className="relative flex h-[2px] bg-gray-200"></div>
                 {/* activity bar */}
                 {/* bar chart */}
-                <div className="bg-red-400 w-full h-48">
-                  
+                <div className="relative flex">
+                  <div>
+                    <div className="relative w-[16px] h-40 bg-blue-100"></div>
+                    <div
+                      className="relative w-[16px] flex bg-blue-400"
+                      style={{
+                        top: `-${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                        height: `${
+                          ((data?.activity?.monthly?.[0]?.value ?? 0) / 400) *
+                          100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
                 </div>
                 {/* bar chart */}
 
