@@ -27,6 +27,7 @@ import lura from "../../../public/lura.png";
 import leaderboard_arrow_up from "../../../public/leaderboard_arrow_up.png";
 import leaderboard_arrow_down from "../../../public/leaderboard_arrow_down.png";
 import graph from "../../../public/graph.png";
+import vector_down from "../../../public/vector_down.png";
 
 // interface for topic
 interface Topic {
@@ -60,6 +61,12 @@ interface Data {
     average_session_length_seconds: number;
     starting_knowledge_percentage: number;
     current_knowledge_percentage: number;
+  };
+  activity?: {
+    monthly?: {
+      month: string;
+      value: number;
+    }[];
   };
 }
 
@@ -338,19 +345,35 @@ const Dashboard = () => {
               </div>
               <div className="bg-slate-50 rounded-2xl p-4">
                 {/* activity header */}
-                <div></div>
+                <div className="relative justify-between flex w-full">
+                  <div>
+                    <p>Activity</p>
+                  </div>
+                  <div className="relative flex justify-end gap-1 items-center">
+                    <p>Month</p>
+                    <Image
+                      src={vector_down}
+                      alt="down arrow"
+                      className="w-[12px] h-[8px]"
+                    />
+                  </div>
+                </div>
                 {/* end activity header */}
 
                 {/* activity bar */}
-                <div className="relative flex h-[1px] bg-gray-400 xl:top-6"></div>
+                <div className="relative flex h-[2px] bg-gray-200"></div>
                 {/* activity bar */}
                 {/* bar chart */}
-                <div></div>
+                <div className="bg-red-400 w-full h-48"></div>
                 {/* bar chart */}
+
                 {/* month div */}
-                <div></div>
+                <div className="relative flex left-10 gap-9">
+                  {data?.activity?.monthly?.map((item, index) => (
+                    <p key={index}>{item.month}</p>
+                  )) || <p>No data available</p>}
+                </div>
                 {/* end month div */}
-                <div></div>
               </div>
             </div>
             {/* end activity */}
